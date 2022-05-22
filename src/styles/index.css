@@ -1,0 +1,455 @@
+/* <---|| Home ||---> */
+.home {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	color: var(--black1);
+	background-image: linear-gradient(#ffffffb6, #333d79ff), url('assets/page.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+.home .header {
+	position: relative;
+	text-align: center;
+}
+.home .header h1 {
+	font-size: 5em;
+}
+.home .header p {
+	font-size: 1.3em;
+}
+.home .login {
+	position: relative;
+	width: 400px;
+	margin: 10px;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	background: var(--white);
+}
+.home .login h3 {
+	font-size: 1em;
+	color: var(--blue);
+	margin-bottom: 10px;
+}
+.home .login input {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	font-size: 1em;
+	border: 1px solid var(--black2);
+}
+.home .login button {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 1em;
+	font-weight: 500;
+	border: 1px solid var(--black2);
+	color: var(--white);
+	background: var(--blue);
+}
+/* <---|| Navigation ||---> */
+.navigation {
+	position: fixed;
+	width: 300px;
+	height: 100%;
+	background: var(--blue);
+	border-left: 10px solid var(--blue);
+	transition: 0.5s;
+	overflow: hidden;
+}
+.navigation.active {
+	width: 80px;
+}
+.navigation ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.navigation ul li,
+.navigation ul li a.active {
+	position: relative;
+	width: 100%;
+	list-style: none;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+.navigation ul li:hover,
+.navigation ul li a.active {
+	background: var(--white);
+}
+.navigation ul li:nth-child(1) {
+	font-size: 1.7em;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	pointer-events: none;
+}
+.navigation ul li a {
+	position: relative;
+	width: 100%;
+	text-decoration: none;
+	display: flex;
+	color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li a.active {
+	color: var(--blue);
+}
+.navigation ul li .icon {
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 60px;
+	line-height: 75px;
+	text-align: center;
+}
+.navigation ul li .icon svg {
+	font-size: 1.75em;
+}
+.navigation ul li .title {
+	position: relative;
+	display: block;
+	padding: 0 10px;
+	height: 60px;
+	line-height: 60px;
+	text-align: start;
+	white-space: nowrap;
+}
+.navigation ul li .sub {
+	position: relative;
+	display: block;
+	font-size: 13px;
+	color: var(--black2);
+	line-height: 60px;
+}
+.navigation ul li:hover a::before,
+.navigation ul li a.active::before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: -50px;
+	width: 50px;
+	height: 50px;
+	background: transparent;
+	border-radius: 50%;
+	box-shadow: 35px 35px 0 10px var(--white);
+}
+.navigation ul li:hover a::after,
+.navigation ul li a.active::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: -50px;
+	width: 50px;
+	height: 50px;
+	background: transparent;
+	border-radius: 50%;
+	box-shadow: 35px -35px 0 10px var(--white);
+}
+
+/* <---|| Main - Topbar ||---> */
+.main {
+	position: absolute;
+	left: 300px;
+	width: calc(100% - 300px);
+	min-height: 100vh;
+	background: var(--white);
+	transition: 0.5s;
+}
+.main.active {
+	width: calc(100% - 80px);
+	left: 80px;
+}
+.topbar {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+}
+.topbar .toggle {
+	position: relative;
+	top: 0;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.75em;
+	color: var(--blue);
+	cursor: pointer;
+}
+.topbar .search {
+	position: relative;
+	width: 400px;
+	margin: 0 10px;
+}
+.topbar .search label {
+	position: relative;
+	width: 100%;
+}
+.topbar .search label input {
+	width: 100%;
+	height: 40px;
+	border-radius: 40px;
+	outline: none;
+	padding: 5px 20px;
+	padding-left: 40px;
+	font-size: 1em;
+	background: transparent;
+	border: 1px solid var(--black2);
+}
+.topbar .search label svg {
+	position: absolute;
+	top: 4px;
+	left: 15px;
+	font-size: 1em;
+	color: var(--black2);
+}
+.topbar .user {
+	position: relative;
+	min-width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+.topbar .user img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* <---|| Main - CardBox ||---> */
+.cardBox {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(4, 1fr);
+}
+.cardBox .card {
+	position: relative;
+	cursor: pointer;
+	padding: 30px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.cardBox .card .number {
+	position: relative;
+	font-weight: 500;
+	font-size: 2em;
+	color: var(--blue);
+}
+.cardBox .card .title {
+	color: var(--black2);
+	font-size: 1.1em;
+	margin-top: 5px;
+}
+.cardBox .card .icon {
+	font-size: 3em;
+	color: var(--black2);
+	opacity: 0.4;
+}
+.cardBox .card:hover {
+	background: var(--blue);
+}
+.cardBox .card:hover .icon,
+.cardBox .card:hover .title,
+.cardBox .card:hover .number {
+	color: var(--white);
+}
+
+/* <---|| Main - DetailBox ||---> */
+.details {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 30px;
+	margin-top: 10px;
+}
+.details .window {
+	position: relative;
+	display: grid;
+	max-height: 400px;
+	background: var(--white);
+	padding: 20px;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+	border-radius: 20px;
+}
+.details .window .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.details .window .header h2 {
+	font-weight: 500;
+	color: var(--blue);
+}
+.details .window .header a {
+	position: relative;
+	padding: 2px 5px;
+	color: var(--white);
+	background: var(--blue);
+	text-decoration: none;
+	border-radius: 5px;
+}
+.details .window table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+.details .window span {
+	padding: 2px 4px;
+	color: var(--white);
+	background: var(--blue);
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 4px;
+}
+.details .window span.fail {
+	background: #e14c38;
+}
+.details .window span.pend {
+	background: #fadb56;
+}
+.details .window span.done {
+	background: #468990;
+}
+.details .window table thead {
+	font-weight: 600;
+	line-height: 2em;
+}
+.details .window table tr {
+	color: var(--black1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .window table tr:last-child {
+	border-bottom: none;
+}
+.details .window table tbody tr:hover {
+	color: var(--white);
+	background: var(--blue);
+}
+.details .window table tr td {
+	padding: 10px;
+}
+.details .window table tr td:nth-child(3) {
+	text-align: center;
+}
+.details .window table tr td:nth-child(2),
+.details .window table tr td:last-child {
+	text-align: end;
+}
+
+/* <---|| Main - DetailBox : List ||---> */
+.details .window table.list .imgBox {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.details .window table.list .imgBox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.details .window table.list tr:hover {
+	background: var(--blue);
+	color: var(--white);
+}
+.details .window table.list tr td {
+	text-align: start;
+	padding: 12px 10px;
+}
+.details .window table.list tr td h4 {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.2rem;
+}
+.details .window table.list .location {
+	font-size: 14px;
+	color: var(--black2);
+	background: none;
+}
+
+/* <---|| Responsive Design ||---> */
+
+@media (max-width: 991px) {
+	.navigation {
+		left: -300px;
+	}
+	.navigation.active {
+		width: 300px;
+		left: 0;
+	}
+	.main {
+		width: 100%;
+		left: 0;
+	}
+	.main.active {
+		left: 300px;
+	}
+	.cardBox {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 768px) {
+	.details {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.window {
+		overflow-x: auto;
+	}
+	.details .window span {
+		white-space: nowrap;
+	}
+}
+@media (max-width: 480px) {
+	.cardBox {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.navigation {
+		width: 100%;
+		left: -100%;
+		z-index: 999;
+	}
+	.navigation.active {
+		width: 100%;
+		left: 0;
+	}
+	.toggle {
+		z-index: 1000;
+	}
+	.main.active .toggle {
+		position: fixed;
+		right: 0;
+		left: initial;
+		color: var(--white);
+	}
+}
