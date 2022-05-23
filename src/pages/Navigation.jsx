@@ -24,19 +24,19 @@ const Navigation = ({ toggle }) => {
 			icon: <IoHomeOutline />,
 		},
 		{
-			title: 'Edit Profile',
-			link: '/profile',
-			icon: <IoPersonOutline />,
+			title: 'Shared Expense',
+			link: '/shared',
+			icon: <IoHomeOutline />,
 		},
 		{
-			title: 'Add Money',
+			title: 'Cash In/Out',
 			link: '/money',
 			icon: <IoHelpCircleOutline />,
 		},
 		{
-			title: 'Add Expense',
-			link: '/expense',
-			icon: <IoMailOutline />,
+			title: 'Edit Profile',
+			link: '/profile',
+			icon: <IoPersonOutline />,
 		},
 		{
 			title: 'Logout',

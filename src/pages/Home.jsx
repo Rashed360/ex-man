@@ -8,9 +8,11 @@ const Home = () => {
 				</div>
 				<div className='login'>
 					<h3>Login to Continue</h3>
-					<input type='text' placeholder='Email Address' />
-					<input type='password' placeholder='●●●●●●●●' />
-					<button>Login Now</button>
+					<form>
+						<input type='text' placeholder='Email Address' autoFocus />
+						<input type='password' placeholder='●●●●●●●●' />
+						<button type='submit'>Login Now</button>
+					</form>
 				</div>
 			</div>
 		</div>
