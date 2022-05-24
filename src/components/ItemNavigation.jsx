@@ -14,10 +14,12 @@ const ItemNavigation = ({ icon, title, link, sub }) => {
 	}
 	return (
 		<li>
-			<NavLink to={link}>
-				<span className='icon'>{icon}</span>
-				<span className='title'>{title}</span>
-			</NavLink>
+			<abbr title={title}>
+				<NavLink to={link}>
+					<span className='icon'>{icon}</span>
+					<span className='title'>{title}</span>
+				</NavLink>
+			</abbr>
 		</li>
 	)
 }

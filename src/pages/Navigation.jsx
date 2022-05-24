@@ -1,47 +1,38 @@
 import ItemNavigation from 'components/ItemNavigation'
-import {
-	IoColorFilterSharp,
-	IoHomeOutline,
-	IoPersonOutline,
-	IoMailOutline,
-	IoHelpCircleOutline,
-	IoSettingsOutline,
-	IoFingerPrintOutline,
-	IoLogOutOutline,
-} from 'react-icons/io5'
+import { BiWallet, BiUserCircle, BiVector, BiMoney, BiIdCard, BiLogOut } from 'react-icons/bi'
 
 const Navigation = ({ toggle }) => {
 	const navigationList = [
 		{
-			title: 'eX Man',
+			title: 'EX-MAN',
 			link: '',
-			icon: <IoColorFilterSharp />,
+			icon: <BiWallet />,
 			sub: '@0.1.3',
 		},
 		{
 			title: 'Dashboard',
 			link: '/',
-			icon: <IoHomeOutline />,
+			icon: <BiUserCircle />,
 		},
 		{
 			title: 'Shared Expense',
 			link: '/shared',
-			icon: <IoHomeOutline />,
+			icon: <BiVector />,
 		},
 		{
 			title: 'Cash In/Out',
 			link: '/money',
-			icon: <IoHelpCircleOutline />,
+			icon: <BiMoney />,
 		},
 		{
 			title: 'Edit Profile',
 			link: '/profile',
-			icon: <IoPersonOutline />,
+			icon: <BiIdCard />,
 		},
 		{
 			title: 'Logout',
 			link: '/logout',
-			icon: <IoLogOutOutline />,
+			icon: <BiLogOut />,
 		},
 	]
 	return (

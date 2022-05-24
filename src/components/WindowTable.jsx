@@ -37,6 +37,14 @@ const WindowTable = () => {
 							<span className='fail'>Failed</span>
 						</td>
 					</tr>
+					<tr>
+						<td>Refrigerator</td>
+						<td>15,350</td>
+						<td>5,000</td>
+						<td>
+							<span className='fail'>Failed</span>
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</ContainerWindow>

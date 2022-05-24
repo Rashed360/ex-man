@@ -243,7 +243,7 @@
 	padding: 20px;
 	display: grid;
 	grid-gap: 30px;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 }
 .cardBox .card {
 	position: relative;
@@ -253,6 +253,15 @@
 	display: flex;
 	justify-content: space-between;
 	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.cardBox .card:first-child {
+	background-color: #f6f3b5;
+}
+.cardBox .card:nth-child(2) {
+	background-color: #bbf6f3;
+}
+.cardBox .card:last-child {
+	background-color: #ffdcbe;
 }
 .cardBox .card .number {
 	position: relative;
@@ -291,7 +300,7 @@
 }
 .details .window {
 	position: relative;
-	display: grid;
+	/* display: grid; */
 	max-height: 400px;
 	background: var(--white);
 	padding: 20px;
@@ -363,6 +372,59 @@
 	text-align: end;
 }
 
+/* <---|| Main - History ||---> */
+.history-content {
+	position: relative;
+	width: 100%;
+}
+.history-content .history-card {
+	position: relative;
+	margin-top: 10px;
+	border-radius: 10px;
+	color: #646464;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+}
+.history-content .history-card .balance,
+.history-content .history-card .timedate {
+	display: flex;
+	justify-content: space-between;
+	background: #f8f8f8;
+}
+.history-content .history-card .balance h3 {
+	line-height: 40px;
+}
+.history-content .history-card .balance p {
+	line-height: 40px;
+}
+.history-content .history-card .balance p,
+.history-content .history-card .balance h3,
+.history-content .history-card .timedate p {
+	width: 50%;
+	text-align: center;
+}
+.history-content .history-card .title {
+	width: 100%;
+	padding: 5px;
+	font-size: 1.05em;
+}
+.history-content .history-card .tag-group {
+	position: relative;
+	display: flex;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+.history-content .history-card .tag-group span {
+	font-size: 0.8em;
+	margin-right: 5px;
+	padding: 2px 8px;
+	border-radius: 10px;
+	background: #c7c7c7;
+}
+.history-content .history-card .timedate p {
+	font-size: 0.85em;
+}
+
 /* <---|| Main - DetailBox : List ||---> */
 .details .window table.list .imgBox {
 	position: relative;
@@ -400,7 +462,7 @@
 
 /* <---|| Responsive Design ||---> */
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
 	.navigation {
 		left: -300px;
 	}
@@ -415,9 +477,6 @@
 	.main.active {
 		left: 300px;
 	}
-	.cardBox {
-		grid-template-columns: repeat(2, 1fr);
-	}
 }
 @media (max-width: 768px) {
 	.details {
@@ -428,6 +487,9 @@
 	}
 	.details .window span {
 		white-space: nowrap;
+	}
+	.cardBox {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }
 @media (max-width: 480px) {

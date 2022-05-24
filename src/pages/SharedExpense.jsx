@@ -1,5 +1,13 @@
+import CardBox from 'components/CardBox'
+import DetailsBox from 'components/DetailsBox'
+
 const SharedExpense = () => {
-	return <div>SharedExpense</div>
+	return (
+		<>
+			<CardBox />
+			<DetailsBox />
+		</>
+	)
 }
 
 export default SharedExpense
