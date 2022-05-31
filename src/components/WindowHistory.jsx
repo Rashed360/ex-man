@@ -3,7 +3,7 @@ import ItemHistory from './ItemHistory'
 
 const WindowHistory = () => {
 	return (
-		<ContainerWindow title='Expense History'>
+		<ContainerWindow title='Recent Orders'>
 			<div className='history-content'>
 				<ItemHistory />
 				<ItemHistory />

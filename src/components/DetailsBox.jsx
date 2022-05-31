@@ -1,10 +1,10 @@
 import WindowList from 'components/WindowList'
-import WindowHistory from './WindowHistory'
+import WindowDetail from './WindowDetail'
 
 const DetailsBox = () => {
 	return (
 		<div className='details'>
-			<WindowHistory />
+			<WindowDetail />
 			<WindowList />
 		</div>
 	)

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { store } from './app/store'
 import 'styles/globals.css'
 import 'styles/index.css'
-import App from 'pages/_App'
+import Router from 'pages/Router'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -13,7 +13,7 @@ const root = createRoot(container)
 root.render(
 	<BrowserRouter>
 		<Provider store={store}>
-			<App />
+			<Router />
 		</Provider>
 	</BrowserRouter>
 )

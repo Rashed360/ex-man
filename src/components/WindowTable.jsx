@@ -2,7 +2,7 @@ import ContainerWindow from './ContainerWindow'
 
 const WindowTable = () => {
 	return (
-		<ContainerWindow title='Recent Orders' more='View All'>
+		<ContainerWindow title='Recent Orders'>
 			<table className='table'>
 				<thead>
 					<tr>

@@ -8,20 +8,20 @@ import Profile from './Profile'
 import Logout from './Logout'
 import SharedExpense from './SharedExpense'
 
-const App = () => {
+const Router = () => {
 	return (
 		<Routes>
-			<Route path='/' element={<Dashboard />}>
+			<Route path='/' element={<Home />} />
+			<Route path='/dashboard' element={<Dashboard />}>
 				<Route index element={<Overview />} />
 				<Route path='money' element={<CashInOut />} />
 				<Route path='profile' element={<Profile />} />
 				<Route path='shared' element={<SharedExpense />} />
 				<Route path='logout' element={<Logout />} />
 			</Route>
-			<Route path='/home' element={<Home />} />
 			<Route path='*' element={<NoMatch />} />
 		</Routes>
 	)
 }
 
-export default App
+export default Router

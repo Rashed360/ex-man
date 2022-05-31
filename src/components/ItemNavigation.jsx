@@ -4,7 +4,7 @@ const ItemNavigation = ({ icon, title, link, sub }) => {
 	if (link === '') {
 		return (
 			<li>
-				<a href=''>
+				<a href='#'>
 					<span className='icon'>{icon}</span>
 					<span className='title'>{title}</span>
 					{sub && <span className='sub'>{sub}</span>}
